@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gogaga Holidays</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <span>Gogaga Holidays</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#packages">Packages</a>
+      <a href="#resultsSection">Travel Planner</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="book-btn" onclick="goToPackages()">Book Now</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Explore Your Dream Destinations</h1>
+      <p>Book unforgettable holiday experiences with Gogaga Holidays.</p>
+
+      <div class="search-box">
+        <select id="tripTypeInput" onchange="updateDestinations()">
+          <option value="">Trip Type</option>
+          <option value="national">🇮🇳 National</option>
+          <option value="international">🌍 International</option>
+        </select>
+
+        <select id="destinationInput">
+          <option value="">Select Destination</option>
+        </select>
+
+        <input type="date" id="travelDateInput" />
+        <input type="number" id="travelerInput" placeholder="Travelers" min="1" />
+
+        <select id="budgetInput">
+          <option value="">Select Budget</option>
+          <option value="15000">Below ₹15,000</option>
+          <option value="25000">Below ₹25,000</option>
+          <option value="40000">Below ₹40,000</option>
+          <option value="60000">Below ₹60,000</option>
+          <option value="80000">Below ₹80,000</option>
+          <option value="100000">Below ₹1,00,000</option>
+        </select>
+
+        <button onclick="showTravelPlan()">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="results-section" id="resultsSection" style="display:none;">
+    <h2>Your Travel Plan</h2>
+    <div id="resultContainer"></div>
+  </section>
+
+  <!-- Packages -->
+  <section class="packages" id="packages">
+    <h2>Popular Holiday Packages</h2>
+    <div class="package-grid">
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80" alt="Goa">
+        <div class="package-info">
+          <h3>Goa Beach Escape</h3>
+          <p>4 Days / 3 Nights</p>
+          <p>Relax on Goa’s sunny beaches with premium stay.</p>
+          <h4>₹14,999</h4>
+          <button onclick="bookPackage('Goa Beach Escape')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Kashmir">
+        <div class="package-info">
+          <h3>Kashmir Paradise</h3>
+          <p>5 Days / 4 Nights</p>
+          <p>Enjoy the beauty of snow, lakes, and valleys.</p>
+          <h4>₹24,999</h4>
+          <button onclick="bookPackage('Kashmir Paradise')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Bali">
+        <div class="package-info">
+          <h3>Bali Honeymoon</h3>
+          <p>5 Days / 4 Nights</p>
+          <p>Romantic getaway with tropical luxury.</p>
+          <h4>₹39,999</h4>
+          <button onclick="bookPackage('Bali Honeymoon')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80" alt="Dubai">
+        <div class="package-info">
+          <h3>Dubai Adventure</h3>
+          <p>5 Days / 4 Nights</p>
+          <p>Luxury shopping, desert safari, and city tours.</p>
+          <h4>₹59,999</h4>
+          <button onclick="bookPackage('Dubai Adventure')">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why-us" id="why-us">
+    <h2>Why Choose Gogaga Holidays</h2>
+    <div class="features">
+      <div class="feature-card"><h3>Best Prices</h3><p>Affordable packages with no hidden charges.</p></div>
+      <div class="feature-card"><h3>Custom Trips</h3><p>Travel plans tailored according to your needs.</p></div>
+      <div class="feature-card"><h3>24/7 Support</h3><p>Our travel experts are available anytime.</p></div>
+      <div class="feature-card"><h3>Trusted Service</h3><p>Thousands of happy customers across India.</p></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Travelers Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card"><p>"Amazing service and smooth booking experience. Highly recommended!"</p><h4>- Priya, Hyderabad</h4></div>
+      <div class="testimonial-card"><p>"The Bali trip was perfectly organized. Loved every moment."</p><h4>- Rahul, Bengaluru</h4></div>
+      <div class="testimonial-card"><p>"Budget-friendly and professional. Will book again!"</p><h4>- Sneha, Vijayawada</h4></div>
+      <div class="testimonial-card"><p>"We booked our Goa family trip and everything was planned beautifully."</p><h4>- Karthik, Chennai</h4></div>
+      <div class="testimonial-card"><p>"Very easy booking process and the customer support team was really helpful."</p><h4>- Anjali, Visakhapatnam</h4></div>
+      <div class="testimonial-card"><p>"Dubai package was worth every rupee. Hotels and sightseeing were excellent."</p><h4>- Arjun, Mumbai</h4></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <h3>Gogaga Holidays</h3>
+      <p>Email: support@gogagaholidays.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>© 2026 Gogaga Holidays. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Package Booking Modal -->
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Book Your Package</h2>
+      <form id="bookingForm">
+        <input type="text" id="customerName" placeholder="Enter your name" required />
+        <input type="email" id="customerEmail" placeholder="Enter your email" required />
+        <input type="tel" id="customerPhone" placeholder="Enter your phone number" required />
+        <input type="text" id="selectedPackage" readonly />
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Travel Booking Modal -->
+  <div class="modal" id="travelBookingModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeTravelModal()">&times;</span>
+      <h2>Book Travel Option</h2>
+      <form id="travelBookingForm">
+        <input type="text" id="travelCustomerName" placeholder="Enter your name" required />
+        <input type="email" id="travelCustomerEmail" placeholder="Enter your email" required />
+        <input type="tel" id="travelCustomerPhone" placeholder="Enter your phone number" required />
+        <input type="text" id="selectedTravelOption" readonly />
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
