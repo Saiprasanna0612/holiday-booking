@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gogaga Flight Dashboard</title>
+  <link rel="stylesheet" href="flight-ui.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">gogaga</div>
+
+    <div class="menu-section">
+      <p class="menu-title">MENU</p>
+      <ul>
+        <li class="active">🏠 Dashboard</li>
+        <li>📌 Leads</li>
+        <li>🗺️ Itineraries</li>
+        <li>⭐ Google Reviews</li>
+        <li>🎟️ Vouchers</li>
+        <li>👤 Accounts</li>
+        <li>📊 Reports</li>
+        <li>🛟 Customer Support</li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <p class="menu-title">USER CONTROL</p>
+      <ul>
+        <li>⚙️ User Settings</li>
+        <li>🧩 Master Settings</li>
+        <li>💼 HRM</li>
+        <li>📁 Assets Management</li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <p class="menu-title">PARTICIPANTS</p>
+      <ul>
+        <li>👥 Itinerary Customers</li>
+        <li>🤝 Partners</li>
+        <li>🏢 Suppliers</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="left-top">
+        <span class="hamburger">☰</span>
+      </div>
+      <div class="right-top">
+        <span>🔔</span>
+        <span>💬</span>
+        <span>👤 Girish Kumar</span>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <section class="content-card">
+
+      <!-- Tabs -->
+      <div class="main-tabs">
+        <button class="tab active">Indian Holidays</button>
+        <button class="tab">International Holidays</button>
+      </div>
+
+      <div class="sub-tabs">
+        <button class="subtab active">Package with Flights</button>
+        <button class="subtab">Package without Flights</button>
+      </div>
+
+      <!-- Filters -->
+      <div class="filters">
+        <div class="filter-box">
+          <label>Destination</label>
+          <input type="text" value="Goa" />
+        </div>
+
+        <div class="filter-box">
+          <label>Trip Start Date</label>
+          <input type="text" value="Tue, Mar 12" />
+        </div>
+
+        <div class="filter-box">
+          <label>No of Passengers</label>
+          <input type="text" value="2 Adults, 2 Children" />
+        </div>
+
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <!-- Flight Summary -->
+      <div class="summary-bar">
+        <div class="summary-left">
+          <div>
+            <small>Departure - Air India</small>
+            <h3>11:30 → 18:55</h3>
+          </div>
+          <div class="price">₹105,300.00</div>
+        </div>
+
+        <div class="summary-right">
+          <div>
+            <small>Return - Air India</small>
+            <h3>00:50 → 01:55</h3>
+          </div>
+          <div class="price">₹105,300.00</div>
+        </div>
+
+        <div class="total-box">
+          <small>For 2 adults, 2 children</small>
+          <h2>₹210,600.00</h2>
+        </div>
+      </div>
+
+      <!-- Flight Results -->
+      <div class="flight-columns">
+
+        <!-- Outbound -->
+        <div class="flight-column">
+          <h4>Outbound (HYD → GOX)</h4>
+
+          <div class="flight-card">
+            <div class="airline">✈️ Air India Express</div>
+            <div class="times">
+              <span>12:05</span>
+              <span>1 stop</span>
+              <span>13:30</span>
+            </div>
+            <div class="meta">₹13,300 • Refundable • Hand Baggage 7kg</div>
+            <button>Book</button>
+          </div>
+
+          <div class="flight-card">
+            <div class="airline">✈️ Air India</div>
+            <div class="times">
+              <span>11:30</span>
+              <span>1 stop</span>
+              <span>18:55</span>
+            </div>
+            <div class="meta">₹13,300 • Refundable • Cabin 7kg</div>
+            <button>Book</button>
+          </div>
+
+          <div class="flight-card">
+            <div class="airline">✈️ IndiGo</div>
+            <div class="times">
+              <span>20:50</span>
+              <span>Direct</span>
+              <span>06:20</span>
+            </div>
+            <div class="meta">₹13,300 • Non-refundable • Cabin 7kg</div>
+            <button>Book</button>
+          </div>
+
+          <div class="flight-card">
+            <div class="airline">✈️ Star Air</div>
+            <div class="times">
+              <span>09:50</span>
+              <span>Direct</span>
+              <span>17:55</span>
+            </div>
+            <div class="meta">₹13,300 • Refundable • Cabin 7kg</div>
+            <button>Book</button>
+          </div>
+        </div>
+
+        <!-- Return -->
+        <div class="flight-column">
+          <h4>Return (GOX → HYD)</h4>
+
+          <div class="flight-card">
+            <div class="airline">✈️ Air India Express</div>
+            <div class="times">
+              <span>12:05</span>
+              <span>1 stop</span>
+              <span>13:30</span>
+            </div>
+            <div class="meta">₹13,300 • Refundable • Hand Baggage 7kg</div>
+            <button>Book</button>
+          </div>
+
+          <div class="flight-card">
+            <div class="airline">✈️ Air India</div>
+            <div class="times">
+              <span>13:15</span>
+              <span>1 stop</span>
+              <span>06:15</span>
+            </div>
+            <div class="meta">₹13,300 • Refundable • Cabin 7kg</div>
+            <button>Book</button>
+          </div>
+
+          <div class="flight-card">
+            <div class="airline">✈️ IndiGo</div>
+            <div class="times">
+              <span>20:50</span>
+              <span>Direct</span>
+              <span>06:20</span>
+            </div>
+            <div class="meta">₹13,300 • Non-refundable • Cabin 7kg</div>
+            <button>Book</button>
+          </div>
+
+          <div class="flight-card">
+            <div class="airline">✈️ Star Air</div>
+            <div class="times">
+              <span>09:50</span>
+              <span>Direct</span>
+              <span>17:55</span>
+            </div>
+            <div class="meta">₹13,300 • Refundable • Cabin 7kg</div>
+            <button>Book</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="flight-ui.js"></script>
+</body>
+</html>
